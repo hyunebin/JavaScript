@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <script>
+        let object = {
+            키A: "값A",
+            키B: "값B",
+            키C: "값C",
+            키D: "값D"
+        };
+        //객체로 접근
+        //객체 요소 접근
+        let key = "키A"
+        object[key]
+        object["키A"]
+
+        object.키A;
+        object.키B; 
+
+        for (let i in object){
+            alert(object[i])
+        }
+        
+        let person = {
+            name: '김현빈',
+            eat: function(food){
+                alert(this.name +'을'+food+'먹습니다.');//자신이 가진 속성중에서 참조가능
+            },
+            eat_Other : (food) =>{
+                alert(this.name +'을'+food+'먹습니다.');//화살표 함수는 this. 를바인드 하지 않음
+            } 
+        };
+
+        person.eat('하나');
+        person.eat_Other('둘');
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

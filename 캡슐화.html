@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <script>
+        class Rectangle{ // 완전 자바처럼 바꿔도 상관 x
+            constructor(width, height){
+                let _width = width; // java의 private 와 같은 맥락 
+                let _height = height;
+
+                this.getWidth = function(){ //java의 getMethod와 동일
+                    return _width;
+                }
+
+                this.getHeight = function(){ //java의 getMethod와 동일
+                    return _height;
+                }
+
+                this.setWidth = function(value){//java의 setMethid와 동일
+                    if(value <=0){
+                    return alert('0보다 작은 값은 넣을 수 없습니다.')
+                    }
+                    width = value;
+                }
+
+                this.setHeight = function(value){//java의 setMethid와 동일
+                if(value <=0){
+                    return alert('0보다 작은 값은 넣을 수 없습니다.')
+                }
+                    height = value;
+                }
+            }
+
+            getArea(){
+                return this.getHeight() * this.getWidth();
+            }
+
+        }
+
+        let rectangle = new Rectangle(5,7);
+        alert('area = ' + rectangle.getArea());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

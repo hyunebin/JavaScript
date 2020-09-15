@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <script>
+
+        let i = 0;
+
+        function callTenTimes(callback){
+            for(let i = 0; i < 10; i++){
+                callback();
+                alert("i는 " + i + "입니다.");
+            }
+        }
+
+        function plus(){
+            i++;
+        }
+
+        callTenTimes(plus)
+
+        //JS에서는 함수 자체를 매개변수로 사용할 수 있음
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

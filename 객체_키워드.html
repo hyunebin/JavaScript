@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <script>
+        let student = {
+            이름: '연하',
+            국어: 92,
+            수학: 92,
+            영어: 99,
+            과학: 98
+        };
+
+        //(문자열 in 객체) 객체 내부에 문자열을 가진 키가있는지 확인 boolean 리턴
+        alert("이름" in student);
+        //with
+
+        let output = '';
+
+        with(student){ // student. 의 객체를 참조 하지 않아도 된다.
+            output += "이름 : " + 이름 ; // 원래는 studnet.이름을 해야한다. 
+            alert(output);
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

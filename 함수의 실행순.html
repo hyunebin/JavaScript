@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>문자열자료</title>
+    <script>
+        
+        for(var i = 0; i < 3; i++){
+            setTimeout(function (){
+                alert(i);
+            }, 2);
+        }
+        // 해당함수는 var이 전역변수 이기 때문에 실행결과가 
+        // i = 0 ~ 3 까지 예약됨 그후 실행하기 때문에 전부 3을 출력
+        // 해당 문제를 해결하기 위한 방법 var > let으로
+
+        for(var i =0; i< 3; i++){
+            setTimeout(function(i){
+                alert(i)
+            },i)
+        }
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

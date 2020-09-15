@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <script>
+        //기본자료형의. < 일시적으로 객체로 변함
+        var primitiveNumber = 273;
+        var objectNumber = new Number(273);
+        let number1 = new Number(11);
+
+        Number.prototype.power = function(){ //프로토 타입 함수 생성자.
+            return this *this;
+        }
+
+        var ouput = ''
+        //primitiveNumber.a = 10 이 줄에서만 객체로 변함
+
+        ouput += typeof(primitiveNumber) + ':' + primitiveNumber + '\n';
+        ouput += typeof(objectNumber) + ':' +objectNumber;
+        alert(ouput);
+        alert(primitiveNumber.power())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

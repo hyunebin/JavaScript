@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <script>
+        //값복사 값만 복사하는것 깊은 복사 clone() !
+
+        var origunalValue = 10;
+        var newValue = origunalValue;
+
+        origunalValue = 273;
+
+        alert(origunalValue);
+        alert(newValue);
+
+// 객체는 배열 자체의 메모리가 복사 > 원본을 바꾸면 나머지도 바뀜 참조복사 얕은 복사
+//--------------------------------------//
+        let originalArray = [1,2,3,4];
+        let newArray = originalArray;
+        let newArray2 = [];//새로운 배열을 만들어야 얕은 복사가 안됨 새로운 힙영역 생성?!인듯
+        for(let i =0; i< originalArray.length; i++){
+            newArray2[i] = originalArray[i];
+        }
+
+        originalArray[0] = 222;
+
+        alert(originalArray);
+        alert(newArray);
+        alert(newArray2);
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

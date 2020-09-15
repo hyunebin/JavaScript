@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+        <script>
+            //자료형 변환
+            //1. 강제 자료형 변환 : 개발자가 원하는 시점에 특정한 코드로 변환
+            //2. 자동 자료형 변환 " 프로그램 자체에서 스스로 변환"
+
+            //숫자로 변환
+            //1. 숫자처럼 생긴 문자열 변환 
+            //2. 숫자처럼 생기지 않은 문자열 변환 -- > x 불가능
+            //3. 불리언 변환
+            //상기 3가지 사항은  Number(해당값) 넣어 숫자로 변경가능 1번경우는 parseint()도 가능함
+
+            //문자로 변환
+            //1. 숫자를 문자열로 변환
+            //2. 불리언을 문자열로 변환
+            // 상기 2가지 사항은  String(해당값) 넣어 숫자로 변경가능 
+
+            // 불리언 자료형 변환
+            // 해당 사항 빼고 모두 true로 변환됨
+            alert(Boolean(0));
+            alert(Boolean(NaN));
+            alert(Boolean(''));
+            alert(Boolean(null));
+            alert(Boolean(undefined));
+
+            // + 자동으로 String으로 변환
+            // - * / % 자동으로 Number로 변환
+            // ! /if/ switch/ for / while 등에서는 boolean으로 변환
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

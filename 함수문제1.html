@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <script>
+        function power(a,b){
+            if(b){
+                let output = 1;
+
+                for(let i = 0; i < b; i++){
+                    output *= a;
+                }
+
+                return output;
+            }else{
+                return a * a;
+            }
+        }
+
+        alert(power(2))
+        alert(power(2,3))
+
+
+        function multiply(){
+            let result = 1;
+
+            for(let i = 0 ; i < arguments.length; i++){
+                result *= arguments[i];
+            }
+
+            return result;
+        }
+
+        alert(multiply(1,2,3,4,5,6,7,8,9))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
