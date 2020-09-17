@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <script>
+        let header = document.querySelector("h1");
+        let listener = function(){alert("aaaa!")}
+        header.addEventListener("click", function(){
+            alert("경고");
+        })
+        header.addEventListener("click", function(){
+            alert("경고");
+        })
+        header.addEventListener("click", function(){
+            alert("경고");
+        })
+        header.addEventListener("click", function(){
+            alert("경고");
+        })
+        header.removeEventListener("click",listener);
+
+        header.addEventListener("click", function(event){
+            event.stopPropagation(); //이벤트 연결 x
+            event.preventDefault();// == return false
+        })
+    </script>
+    
+</body>
+</html>

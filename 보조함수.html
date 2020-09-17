@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 보조 함수 -->
+    <script>
+    //랜덤한 정수를 생성합니다.
+
+    function randomInteger(number){
+         return Math.floor(Math.random() * number) // 소수점 아래자리 버림
+    }
+    </script>
+
+    <script>
+        let english = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        
+        function randomAlhpabet(){
+            return english.charAt(randomInteger(english.length))
+        }
+    </script>
+
+    <script>
+        function randomSpeed(maxSpeed){
+            return Math.random() * maxSpeed - maxSpeed/2;
+        }
+            
+
+    </script>
+
+    <script>
+        let canvasWidth = 700;
+        let canvasHeight = 400;
+
+        function MovingText(){
+            this.x = randomInteger(canvasWidth);
+            this.y = randomInteger(canvasHeight);
+            this.vx = randomSpeed(10);
+            this.vy = randomSpeed(10);
+            this.ax = 0.2;
+            this.ay = 0;
+
+            this.body = document.createElement('h1');
+            this.body.innerHTML = randomAlhpabet();
+            this.body.style.position = 'absolute';
+
+            document.body.appendChild(this.body); // 노드 연결하기
+        }
+
+        MovingText.prototype.move = function(){
+            if(this.x  < 0 || this.x > canvasWidth){
+                this.vx *= -1;
+            }
+
+            if(this.y <0 || this.y > canvasHeight){
+                this.vy *= -1;
+            }
+            this.x += this.vx;
+            this.y += this.vy;
+            this.vx += this.ax;
+            this.vy += this.ay;
+
+            this.body.style.left = this.x + 'px';
+            this.body.style.top = this.y + 'px';
+
+        
+        }
+    </script>
+
+    <script>
+        let movingText = [];
+
+        for(let i = 0; i < 100; i++){
+            movingText.push(new MovingText());
+        }
+        setInterval(function(){
+            for(let i in movingText){
+                movingText[i].move();
+            }
+        }, 1000/30)
+    </script>
+    
+</body>
+</html>

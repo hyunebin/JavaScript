@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="sun">@</h1>
+    <h1 id="earth">0</h1>
+    <h1 id="moon">*</h1>
+    <script>
+        let sun = document.getElementById("sun");
+        let earth = document.getElementById("earth");
+        let moon = document.getElementById("moon");
+
+        let sunX = 250;
+        let sunY = 250;
+        sun.style.position = "absolute";
+        sun.style.left = sunX + "px";
+        sun.style.top = sunY+ "px";
+
+        earth.style.position = "absolute";
+
+        moon.style.position = "absolute"; // 절대좌표
+
+        let earthAngle = 0;
+        let moonAngle = 0;
+
+        
+        setInterval(function(){
+            var earthX = sunX + Math.cos(earthAngle) * 150;
+            let earthY= sunY + Math.cos(earthAngle) * 150;
+            let moonX = earthX + Math.cos(moonAngle) * 30;
+            let moon = earthY + Math.cos(moonAngle) * 30;
+
+            earth.style.left = earthX + "px";
+            earth.style.top = earthY+ "px";
+            moon.style.left = moonX + "px";
+            moon.style.top = moonY+ "px";
+
+     
+
+            earthAngle += 0.1;
+            moonAngle += 0.3;
+
+
+        }, 1000/3); // 1초에 화면을 30번 움직인다. fps = 30
+
+
+    </script>
+    
+</body>
+</html>
