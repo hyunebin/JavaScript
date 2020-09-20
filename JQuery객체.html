@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script
+  src=jquery-3.5.1.js></script>
+
+
+</head>
+<body>
+    <h1></h1>
+    <script>
+        //CSS 선택자: 문서 객체를 선택
+        $("h1").css('color', "red")
+        $("h1").css('background-color', "blue")
+        $("h1").html("안녕하세요");
+
+        // 태그 형태의 문자열 : 문서 객체를 생성
+        $("<h1></h1>")
+            .appendTo("body") // body 객체뒤에 붙힘
+            .css("color" , "yellow")
+            .html("Hello World")
+        let header = document.querySelector("hi")
+        $(header).css("color","cyan")
+        //window.onload의
+         
+    </script>
+</body>
+</html>

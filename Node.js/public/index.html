@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>express</title>
+    <script src = "jquery-3.5.1.js"></script>
+</head>
+<body>
+    <h1>Hello</h1>
+    <button id = "hello">데이터 가져오기</button>
+    <script>
+        $.ajax({
+            method: "PUT",
+            url: "/data",
+            success: function(data, textSuauts, xhr){
+                $("body").html(data)
+            }
+        })
+    </script>    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "jquery-3.5.1.js"></script>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <script>
+        //Setter = JQuery 객체 
+        //1, 문자열, 문자열
+        $("h1").css("color", "red")
+        //2. 객체로 지정
+        $("h1").css({
+            "color":"red",
+            "backgroundColor" : "cyan",
+            "text-align" : "center"
+        })
+        //3. 함수로 값을 입력
+        var array = ["red","blue","orange"]
+        $("h1").css("color", function(index){
+            return array[index]
+        })
+        $("h1").css({
+            "color" : function(index){
+                return array[index]
+            }
+        });
+
+
+
+        //getter  -매개 변수를 하나 생략해서 사용 - 문자열 리턴
+        var value = $("h1").css("color")
+        alert(value)
+    </script>
+</body>
+</html>

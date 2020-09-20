@@ -1,0 +1,39 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src = "jquery-3.5.1.js"></script>
+</head>
+<body>
+    <h1>Hello</h1>
+    <h2>Hello</h2>
+    <script>   
+    $("h1").on("click", 100, function(e){
+        $(this).html("click")
+    })
+    $("h1").on({
+        click: function() {
+            $(this).html("click")
+        },
+        dbclick: function() {
+            $(this).html("dbclick")
+        },
+        mouseenter: function() {
+            $(this).html("mouseclick")
+        }
+    })
+
+    // let handle = function(){
+    //     $("<h2></h2>").html("H2")
+    //                   .appendTo("body")
+    //                   .click(handle)
+        
+    // }
+    // $("h2").on("click",handle)
+
+    $("body").on("click","h2",function(){
+        $("<h2></h2>").html("H2")
+                      .appendTo("body")
+    }) // 클릭 했을때 그것이 h1 태그이면
+    </script>
+</body>
+</html>

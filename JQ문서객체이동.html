@@ -1,0 +1,28 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src = "jquery-3.5.1.js"></script>
+</head>
+<body>
+    <h1>Hello</h1>
+    <script>
+        //$(A).appendTo(B) A를 B의 뒷부분에 추가한다
+        //$(A).prependTo(B) A를 B의  앞부분에 추가한다.
+        //$(A).insertAfter(B) A를 B의 뒤에 추가합니다.
+        //$(A).insetBefore(B) A를 B의 앞에 추가합니다.
+
+        $("<h1></h1>").html("Hello Append").appendTo("body")
+        $("<h1></h1>").html("Hello Prepend").prependTo("body")
+        $("<h1></h1>").html("Hello After").insertAfter("body")
+        $("<h1></h1>").html("Hello Before").insertBefore("body")
+        //위의 내용과 동일 하지만 위에 방법을 더 많이 사용함
+        // $("body").append("<h1></h1>")
+        // $("body").prepend("<h1></h1>")
+        // $("body").after("<h1></h1>")
+        // $("body").before("<h1></h1>")
+
+        
+        
+    </script>
+</body>
+</html>

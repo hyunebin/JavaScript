@@ -1,0 +1,27 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src = "jquery-3.5.1.js"></script>
+</head>
+<body>
+    <a href="http://naver.com">Hello</a>
+    <script>   
+        // 트리거 $("h1").click()
+        $("h1").click(function(e){
+            //$(e.currentTarget).html("click")
+            $(this).html("click")
+            //this == currenTarget
+            
+        })
+        $("a").click(function (e){
+            e.preventDefault()//
+            //event.stopPropagation();//이벤트의 전달 방지
+        })
+
+        $("body").click(function (){
+            $(this).css("background-color", "blue")
+        })
+
+    </script>
+</body>
+</html>

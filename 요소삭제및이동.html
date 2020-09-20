@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hellow world</h1>
+        <div id = "first-div">
+            <h1>안녕하세요</h1>
+        </div>
+        <hr />
+        <div id="second-div">
+
+        </div>
+    <script>
+    
+        var body = document.body;
+        //body.remove(header);
+        //header.parentNode.removeChild(header);위 코드와 같은 코드 이것은 삭제할 객체만 알면된다.
+
+        var firstDiv = document.getElementById("first-div");
+        var secondDiv = document.getElementById("second-div");
+        var header = document.querySelector("h1")
+
+        secondDiv.appendChild(header);
+
+    </script>
+</body>
+</html>

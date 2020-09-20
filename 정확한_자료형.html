@@ -8,9 +8,20 @@
 
         //good
         //const item = {};
+
+        //즉 
+        // const item = new Object();
+        //const item = {}; 같은 말
+
+        function isNumber(value){
+            return value.constructor === Number;
+        }
         
-        let object = {};
-        let object = new Object();
+        let pritimiveNumber = 273;
+        let objectNumber = new Number(52);
+
+        alert(isNumber(pritimiveNumber));
+        alert(isNumber(objectNumber));       
 
         
 

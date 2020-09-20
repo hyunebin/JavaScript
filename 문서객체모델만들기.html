@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){ // body태그에 아무것도 없기 때문에 onload사용
+        let header = document.createElement("h1"); // 태그생성
+        header.innerHTML = "Hello world" //더욱 편한 버전
+
+        let image = document.createElement("img"); // 태그생성
+        let textNode = document.createTextNode("Hellow");
+        image.setAttribute("src", "https://placehold.it/300x300"); //1번
+        image.src = "https://placehold.it/300x300";//2번
+
+        //attrNode.value = "https://placehold.it/300x300";
+        //image.setAttributeNode(attrNode);
+        //header.appendChild(textNode);
+        //let attrNode = document.createAttribute("src");
+        document.body.appendChild(header);
+        document.body.appendChild(image);
+        };
+
+    </script>
+</head>
+<body>
+    >
+    
+</body>
+</html>

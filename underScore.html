@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <script src="underscore.js"></script>
+    <script>
+        var array =[{
+            이름:'바나나',
+            가격:300
+        },{
+            이름:'사과',
+            가격:400
+        },{
+            이름:'배',
+            가격:200
+        }
+    ];
+
+    let output = _.sortBy(array, function(itme){
+        return itme.가격;
+    })
+
+    //화살표 함수를 한줄로 주림
+    //_.sortBy(array, (itme) => {itme.가격;})
+
+    console.log(output);
+
+    let array1 = [1,23,4,5,6,7,7,1,23];
+    console.log(_.sample(array1,4));
+    console.log(_.shuffle(array1));
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

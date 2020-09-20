@@ -1,0 +1,29 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src = "jquery-3.5.1.js"></script>
+</head>
+<body>
+    <img>Hello World</img>
+    <h1>HI</h1>>
+    <script>
+        //Setter
+        $("img").attr("src", "http://placehold.it/100x100") // 속성변경
+        $("img").attr({
+            "src" : "http://placehold.it/100x100",
+            "alt" :  "test image"
+        })
+        //getter
+        var test = $("img").attr("src")
+
+        //setter
+        $("h1").html("Hello")
+        //getter
+        let value = $("h1").html()
+        alert(value)
+
+        //JQ에서는
+        // css html attr text를 사용해서 문서 객체를 활용하낟.
+    </script>
+</body>
+</html>

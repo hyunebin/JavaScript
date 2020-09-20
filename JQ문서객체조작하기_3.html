@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "jquery-3.5.1.js"></script>
+
+    <style>
+        .header{text-align: center;}
+        .red-text{color: rebeccapurple;}
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <script>
+        $("h1").addClass("red-text")
+        $("h1").addClass("header")
+
+        setTimeout(function(){
+            $("h1").removeClass("red-text")
+        }, 2000)
+
+        let outputA = $("h1").hasClass("header")
+        let outputB = $("h1").hasClass("content")
+
+        $("<h2></h2>").html(outputA.toString()).appendTo("body")
+        $("<h2></h2>").html(outputB.toString()  ).appendTo("body")
+       
+    </script>
+</body>
+</html>

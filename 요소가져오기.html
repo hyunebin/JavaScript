@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id = "hello-a" class="test" title="hello">Hello World A</h1>
+    <h1 id = "hello-b">Hello World B</h1>
+    <script>
+        let helloA = document.getElementById("hello-a")//아이기 가져오기
+        let helloB = document.getElementById("hello-b")//아이기 가져오기
+        helloA.innerHTML = "한국어쓰자!";
+        helloB.setAttribute("title", "hello")
+        //document.querySelector("h1") 태그 선택자
+        //document.querySelector("#hello-a") 아이디 선택자
+        //document.querySelector(".test") 클래스 선택자
+        //document.querySelector("[tilte=]") 속성 선택자
+        //document.querySelectorAll() 기본적인 for문을 사용해서 기용해야됨
+        //document.getElementsByTagNames("h1").[0] 배열처럼 이용
+
+    </script>
+    
+</body>
+</html>

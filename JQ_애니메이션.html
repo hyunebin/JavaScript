@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "jquery-3.5.1.js"></script>
+</head>
+
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: rebeccapurple;
+        position: relative;
+    }
+</style>
+<body>
+    <button>Toggle Show</button>
+  
+    <div></div>
+    <script>
+        $("div").click(function(){
+            $(this).stop(true,true)
+            $(this)
+                .animate({
+                    left : "+=100"
+            }, 1000)
+            .delay(1000)
+            .animate({
+                    left: "+=100"
+            }, 1000)
+        });
+        //animate는 큐형식으로 진행됨 clearQueue를 사용하여 대기 큐 제거 가능
+    </script>
+</body>
+</html>
